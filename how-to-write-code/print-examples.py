@@ -1,6 +1,9 @@
-print('Hello, JavaScript.');
+print('Hello, \tJavaScript.');
 print(2001);
-print("What","do","commas","do?");
-print("Does", "adding",      "space", "matter?");
+print("What","do", "\ncommas","do?");
+print("Does", "adding",      "\tspace", "\nmatter?");
+# apparently not
 print('Launch' + 'Code');
-print("LaunchCode was founded in", 2013);
+# combines the two words 
+print("LaunchCode was founded \nin", 2013);
+# could you just put it all, including the number, inside the quotes?
