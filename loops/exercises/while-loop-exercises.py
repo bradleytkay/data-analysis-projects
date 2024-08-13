@@ -1,20 +1,20 @@
 # Define three variables for the LaunchCode shuttle - one for the starting fuel level, another for the number of astronauts aboard, and the third for the altitude the shuttle reaches.
 
-fuel_lvl = 10000
-num_astronauts = 3
-altitude_reached_km = 100
+fuel_lvl = 0
+num_astronauts = 0
+altitude_reached_km = 0
 
 # Exercise #1: Construct while loops to do the following:
   # a. Query the user for the starting fuel level. Validate that the user enters a positive, integer value greater than 5000 but less than 30000. 
 
-while num_choice > 5000 and num_choice < 30000:
+while num_choice > 5000 or num_choice < 30000:
     num_choice = input('Enter a number between 5001 and 29999')
     if num_choice < 5000 or num_choice > 30000:
         print('Invalid entry')
 
 # b. Use a second loop to query the user for the number of astronauts (up to a maximum of 7). Validate the entry.
   
-while num_astronauts > 0 and num_astronauts <= 7:
+while num_astronauts > 0 or num_astronauts <= 7:
     num_astronauts = input('Enter a number between 1 and 7')
     if num_astronauts < 1 or num_astronauts > 7:
         print('Invalid entry')
