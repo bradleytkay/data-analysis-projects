@@ -34,6 +34,6 @@ while num <= 50:
     if num % 3 == 0:
         print(num)
 
-    if num <= -20:
+    if num <= 20:
         break;
 
