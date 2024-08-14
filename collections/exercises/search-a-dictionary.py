@@ -1,6 +1,23 @@
+def menu(flavor, price):
+  options = {
+  'chocolate' : 0.35,
+  'vanilla' : 0.35,
+  'strawberry' : 0.42,
+  'cookies and cream' : 0.45,
+  'mint chocolate chip' : 0.42,
+  'fudge chunk' : 0.45,
+  'saffron' : 2.25,
+  'garlic' : 0.05
+}
+
 # Write your return_cost function here:
-def return_cost(menu, item):
-  pass
+def return_cost(menu, option):
+  if option in menu:
+    return menu[option]
+  else:
+    return 0; 
+
+print(return_cost)
 
 # Write your fanciest_flavor function here:
 
