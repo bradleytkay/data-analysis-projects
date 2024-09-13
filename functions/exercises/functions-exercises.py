@@ -11,6 +11,7 @@ print(make_line(5))
 #I didn't get and don't think I would've ever been able to get this solution
 #without checking the provided solution in Canvas, which is discouraging. 
 
+
 # Part 1 B -- Make a Square
 # create a function using your make_line function to code a square
 
@@ -25,6 +26,7 @@ print(make_square(5))
 #It took me a hot minute to figure out how to incorporate the newline character (\n)
 #I didn't realize it had to be concatenated as a string of its own... 
 
+
 # Part 1 C -- Make a Rectangle
 
 def make_rectangle(height, width):
@@ -35,6 +37,17 @@ def make_rectangle(height, width):
 
 print(make_rectangle(3, 5))
 
+
+def make_square(size):
+    return make_rectangle(size, size)
+
+print(make_square(5))
+
+def make_square(size):
+    square = make_rectangle(size, size)
+    return square
+
+print(make_square(5))
 
 # def make_rectangle(size):
 #     rectangle = ''
@@ -82,6 +95,7 @@ def make_space_line(numSpaces, numChars):
 
 print(make_space_line(5, 5))
 
+
 # Part 2 C -- Make Isosceles Triangle
 
 def make_isosceles_triangle(height):
@@ -95,7 +109,19 @@ print(make_isosceles_triangle(5))
 #I woudln't have figured this one out without the solution provided
 #in the textbook... discouraging again... 
 
+
 # Part 3 -- Make a Diamond
+
+def make_diamond(height):
+    diamond = ''
+    triangle = make_isosceles_triangle(height)
+    diamond += triangle[:1]
+    for i in range(len(triangle) -1, -1, -1):
+        diamond += triangle[i]
+    return diamond
+
+print(make_diamond(5))
+
 
 def make_diamond(height):
     triangle = ''
@@ -104,7 +130,7 @@ def make_diamond(height):
         triangle += (make_space_line(height - i - 1, 2 * i +1) + '\n')
     for i in range(height, 0, -1):
        inverted_triangle += (make_space_line(height - i, 2 * i - 1) + '\n')
-    return triangle + inverted
+    return triangle + inverted_triangle
 
 print(make_diamond(5)) 
 
